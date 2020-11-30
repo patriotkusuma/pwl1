@@ -7,14 +7,14 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item <?= $_SERVER['REQUEST_URI'] == "/crud/index.php" ? 'active' : '' ?>">
+                <li class="nav-item <?= $_SERVER['REQUEST_URI'] == "/index.php" || $_SERVER['REQUEST_URI'] == ""? 'active' : '' ?>">
                     <a class="nav-link" href="index.php">Home </a>
                 </li>
-                <li class="nav-item <?= $_SERVER['REQUEST_URI'] == "/crud/form-daftar.php" ? 'active' : '' ?>">
+                <li class="nav-item <?= $_SERVER['REQUEST_URI'] == "/form-daftar.php" ? 'active' : '' ?>">
                     <a class="nav-link" href="form-daftar.php">Daftar</a>
                 </li>
                 <?php if (isset($_SESSION['logged'])) : ?>
-                    <li class="nav-item <?= $_SERVER['REQUEST_URI'] == "/crud/list-siswa.php" ? 'active' : '' ?>">
+                    <li class="nav-item <?= $_SERVER['REQUEST_URI'] == "/list-siswa.php" ? 'active' : '' ?>">
                         <a class="nav-link" href="list-siswa.php">Pendaftar</a>
                     </li>
                 <?php endif; ?>
